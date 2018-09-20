@@ -147,9 +147,12 @@
                     
 
                     <!-- Main Post Content -->
-                    <h1 id="Hit-the-Pit"><a href="#Hit-the-Pit" class="headerlink" title="Hit the Pit"></a>Hit the Pit</h1><h2 id="Fucking-IE"><a href="#Fucking-IE" class="headerlink" title="Fucking IE"></a>Fucking IE</h2><h3 id="input-tag-attribute-type-”number”"><a href="#input-tag-attribute-type-”number”" class="headerlink" title="input tag attribute type=”number”"></a>input tag attribute type=”number”</h3><ul>
-<li>The attribute type=”number” of input tag is invalid in even IE 11</li>
-</ul>
+                    <h1 id="Hit-the-Pit"><a href="#Hit-the-Pit" class="headerlink" title="Hit the Pit"></a>Hit the Pit</h1><h2 id="Fucking-IE"><a href="#Fucking-IE" class="headerlink" title="Fucking IE"></a>Fucking IE</h2><h3 id="1-input-tag-attribute-type-”number”"><a href="#1-input-tag-attribute-type-”number”" class="headerlink" title="1. input tag attribute type=”number”"></a>1. input tag attribute type=”number”</h3><p>The attribute type=”number” of input tag is invalid in even IE 11, we can also type characters “@, #, …”.</p>
+<h3 id="2-lt-input-type-”file”-clear-selected-file"><a href="#2-lt-input-type-”file”-clear-selected-file" class="headerlink" title="2. \&lt;input type=”file”> clear selected file"></a>2. \&lt;input type=”file”> clear selected file</h3><p>In IE 10, can not clear selected file via:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fileInput.value = <span class="string">''</span></span><br></pre></td></tr></table></figure>
+<p>Need <code>form.reset()</code>:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">ref</span>=<span class="string">"fileForm"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"file"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.$refs.fileForm.reset()</span><br></pre></td></tr></table></figure>
 
                     
                     <!-- Tags Bottom -->
@@ -191,7 +194,7 @@
     <h3>Recent Posts</h3>
     
         <p>
-            <a href="/2018/09/14/hexo-first/">Hit the Pit</a>
+            <a href="/2018/09/14/hit-the-pit/">Hit the Pit</a>
         </p>
     
         <p>
