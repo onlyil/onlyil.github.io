@@ -144,7 +144,7 @@
                     <h1 id="Hit-the-Pit"><a href="#Hit-the-Pit" class="headerlink" title="Hit the Pit"></a>Hit the Pit</h1><h2 id="Common"><a href="#Common" class="headerlink" title="Common"></a>Common</h2><h3 id="1-Download-blob-file"><a href="#1-Download-blob-file" class="headerlink" title="1. Download blob file"></a>1. Download blob file</h3><ul>
 <li><p>Download file with window.URL API and element &lt;a>.</p>
 </li>
-<li><p>In firefox, element &lt;a> must be appened to &lt;body>, and remove it at last.</p>
+<li><p>In firefox, element &lt;a> must be appened to &lt;body>.</p>
 </li>
 <li><p>In IE 11, not support for download attribute of ‘a’, we need use <code>navigator.msSaveBlob(blob, filename)</code>.</p>
 </li>
@@ -153,7 +153,7 @@
 <h3 id="2-new-Date-in-Safari-and-ios-include-mini-program"><a href="#2-new-Date-in-Safari-and-ios-include-mini-program" class="headerlink" title="2. new Date() in Safari and ios(include mini program)"></a>2. <code>new Date()</code> in Safari and ios(include mini program)</h3><p>In Safari, <code>new Date(&#39;2018-10-16&#39;)</code> return <code>Invalid Date</code>.</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">date = date.replace(<span class="regexp">/-/g</span>, <span class="string">'/'</span>)</span><br></pre></td></tr></table></figure>
 <p>Tip: Safari 12.0 support <code>new Date(&#39;2018-10-16&#39;)</code>, found it recently.</p>
-<h2 id="WX-Mini-program"><a href="#WX-Mini-program" class="headerlink" title="WX Mini program"></a>WX Mini program</h2><h3 id="1-flex-layout-on-I"><a href="#1-flex-layout-on-I" class="headerlink" title="1. flex layout on I"></a>1. flex layout on I</h3><h2 id="Fucking-IE"><a href="#Fucking-IE" class="headerlink" title="Fucking IE"></a>Fucking IE</h2><h3 id="1-lt-input-type-quot-number-quot-gt-no-input-restriction"><a href="#1-lt-input-type-quot-number-quot-gt-no-input-restriction" class="headerlink" title="1. &lt;input type=&quot;number&quot;&gt; no input restriction"></a>1. <code>&lt;input type=&quot;number&quot;&gt;</code> no input restriction</h3><p>The attribute type=”number” of input tag is invalid in even IE 11, we can also type characters “@, #, …”.</p>
+<h2 id="WX-Mini-program"><a href="#WX-Mini-program" class="headerlink" title="WX Mini program"></a>WX Mini program</h2><h2 id="Fucking-IE"><a href="#Fucking-IE" class="headerlink" title="Fucking IE"></a>Fucking IE</h2><h3 id="1-lt-input-type-quot-number-quot-gt-no-input-restriction"><a href="#1-lt-input-type-quot-number-quot-gt-no-input-restriction" class="headerlink" title="1. &lt;input type=&quot;number&quot;&gt; no input restriction"></a>1. <code>&lt;input type=&quot;number&quot;&gt;</code> no input restriction</h3><p>The attribute type=”number” of input tag is invalid in even IE 11, we can also type characters “@, #, …”.</p>
 <h3 id="2-lt-input-type-quot-file-quot-gt-clear-selected-file"><a href="#2-lt-input-type-quot-file-quot-gt-clear-selected-file" class="headerlink" title="2. &lt;input type=&quot;file&quot;&gt; clear selected file"></a>2. <code>&lt;input type=&quot;file&quot;&gt;</code> clear selected file</h3><p>In IE 10, can not clear selected file via:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fileInput.value = <span class="string">''</span></span><br></pre></td></tr></table></figure>
 <p>Need <code>form.reset()</code>:</p>
@@ -179,7 +179,7 @@
                     <hr class="dn-l mw4 black-50 mt5" />
                     
                     <!-- Widget 1: About -->
-                    <div class="mt5 mb5 mt0-l">
+                    <div class="mt5 mt0-l">
     <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
         <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
             <img src="/avatar.jpeg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="Only Life">
@@ -195,10 +195,10 @@
                     <!-- Widget 2: Categories -->
                     
 
-                    <div class="scroll-fix">
+                    <div class="scroll-fix pt5">
                         <!-- Widget 3: Recent Posts -->
                         <div class="tc tl-l">
-    <h3 style="margin-top: 0;">Recent Posts</h3>
+    <h3>Recent Posts</h3>
     
         <p>
             <a href="/2018/09/14/hit-the-pit/">Hit the Pit</a>
@@ -213,7 +213,7 @@
                         <!-- Widget 4 : Post dir -->
                         <div class="mt5 tc tl-l">
   <h3>Directory</h3>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Hit-the-Pit"><span class="toc-text">Hit the Pit</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Common"><span class="toc-text">Common</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Download-blob-file"><span class="toc-text">1. Download blob file</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-new-Date-in-Safari-and-ios-include-mini-program"><span class="toc-text">2. new Date() in Safari and ios(include mini program)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#WX-Mini-program"><span class="toc-text">WX Mini program</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-flex-layout-on-I"><span class="toc-text">1. flex layout on I</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Fucking-IE"><span class="toc-text">Fucking IE</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-lt-input-type-quot-number-quot-gt-no-input-restriction"><span class="toc-text">1. &lt;input type=&quot;number&quot;&gt; no input restriction</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-lt-input-type-quot-file-quot-gt-clear-selected-file"><span class="toc-text">2. &lt;input type=&quot;file&quot;&gt; clear selected file</span></a></li></ol></li></ol></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Hit-the-Pit"><span class="toc-text">Hit the Pit</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Common"><span class="toc-text">Common</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Download-blob-file"><span class="toc-text">1. Download blob file</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-new-Date-in-Safari-and-ios-include-mini-program"><span class="toc-text">2. new Date() in Safari and ios(include mini program)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#WX-Mini-program"><span class="toc-text">WX Mini program</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Fucking-IE"><span class="toc-text">Fucking IE</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-lt-input-type-quot-number-quot-gt-no-input-restriction"><span class="toc-text">1. &lt;input type=&quot;number&quot;&gt; no input restriction</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-lt-input-type-quot-file-quot-gt-clear-selected-file"><span class="toc-text">2. &lt;input type=&quot;file&quot;&gt; clear selected file</span></a></li></ol></li></ol></li></ol>
 </div>
                     </div>
                 </div>
@@ -248,10 +248,10 @@
     </div>
 
 <!-- After Footer -->
-<script src="/js/scroll-fix.js"></script>
 <!-- Disqus Comments -->
 
-
+<!-- scroll fix -->
+<script src="/js/scroll-fix.js"></script>
 
 </body>
 
