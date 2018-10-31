@@ -20,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Hello World"/>
+        <meta property="og:title" content="Git Commands Note"/>
     
 
     <!--Open Graph Description-->
@@ -44,7 +44,7 @@
 
     <!-- Title -->
     
-    <title>Hello World - Only Blog</title>
+    <title>Git Commands Note - Only Blog</title>
 
     <!-- Tachyons Core CSS -->
     <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
@@ -114,14 +114,14 @@
     <!-- Title -->
     <div class="w-100 mw8 center vh-40 dt">
         <div class="dtc v-mid white">
-            <h1 class="f1-l f2-m tc tc-m tl-ns">Hello World</h1>
-            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2018-09-13</p>
+            <h1 class="f1-l f2-m tc tc-m tl-ns">Git Commands Note</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2018-10-31</p>
         </div>
     </div>
 
     <!-- Icon -->
     <div class="relative w-100 mw8 center white dn-m db-ns">
-        <i class="header-icon fa fa-file-text-o"></i>
+        <i class="header-icon fa fa-git"></i>
     </div>
 </div>
 
@@ -133,20 +133,32 @@
                 <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
                     <!-- Tags Vertical -->
                     
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/git/">#git</a>
+                            </div>
+                        </div>
+                    
 
                     <!-- Main Post Content -->
-                    <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+                    <h1 id="Git-Commands-Note"><a href="#Git-Commands-Note" class="headerlink" title="Git Commands Note"></a>Git Commands Note</h1><h2 id="git-merge-base"><a href="#git-merge-base" class="headerlink" title="git merge-base  "></a>git merge-base <branch1> <branch2></branch2></branch1></h2><p>Find common ancestor of two branches.</p>
+<h2 id="git-commit-—amend"><a href="#git-commit-—amend" class="headerlink" title="git commit —amend"></a>git commit —amend</h2><p>A convenient way to modify the most recent commit.</p>
+<ul>
+<li>It lets you combine staged changes with the previous commit instead of creating an entirely new commit.</li>
+<li>It can also be used to simply edit the previous commit message without changing its snapshot.</li>
+</ul>
+<h2 id="git-cherry-pick"><a href="#git-cherry-pick" class="headerlink" title="git cherry-pick "></a>git cherry-pick <commitid></commitid></h2><p>Apply the changes introduced by some existing commits.</p>
+<h2 id="git-rebase-i"><a href="#git-rebase-i" class="headerlink" title="git rebase -i "></a>git rebase -i <commitid></commitid></h2><p>Interactive rebasing gives you the opportunity to alter individual commits. This lets you clean up history by removing, splitting, and altering an existing series of commits.</p>
+<h2 id="git-checkout-—patch"><a href="#git-checkout-—patch" class="headerlink" title="git checkout —patch  "></a>git checkout —patch <branch> <file></file></branch></h2><p>Merge other branch some file.</p>
+<h2 id="git-checkout"><a href="#git-checkout" class="headerlink" title="git checkout  "></a>git checkout <branch> <file></file></branch></h2><p>Copy other branch some file directly.</p>
+<h2 id="Tip"><a href="#Tip" class="headerlink" title="Tip"></a>Tip</h2><h3 id="Resubmit-last-commit-that-has-been-push-to-remote"><a href="#Resubmit-last-commit-that-has-been-push-to-remote" class="headerlink" title="Resubmit last commit that has been push to remote"></a>Resubmit last commit that has been push to remote</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git reset HEAD^</span><br><span class="line">git stash</span><br><span class="line">git push —force</span><br><span class="line">git stash pop</span><br><span class="line">git add .</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
 
                     
                     <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/git/">#git</a>
+                        </div>
                     
 
                     <!-- Comments -->
@@ -199,7 +211,7 @@
                         
                             <div class="mt5 tc tl-l dn db-l">
   <h3>Directory</h3>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Git-Commands-Note"><span class="toc-text">Git Commands Note</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#git-merge-base"><span class="toc-text">git merge-base  </span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-commit-—amend"><span class="toc-text">git commit —amend</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-cherry-pick"><span class="toc-text">git cherry-pick </span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-rebase-i"><span class="toc-text">git rebase -i </span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-checkout-—patch"><span class="toc-text">git checkout —patch  </span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-checkout"><span class="toc-text">git checkout  </span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Tip"><span class="toc-text">Tip</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Resubmit-last-commit-that-has-been-push-to-remote"><span class="toc-text">Resubmit last commit that has been push to remote</span></a></li></ol></li></ol></li></ol>
 </div>
                         
                     </div>
