@@ -1,0 +1,37 @@
+.toc
+  padding-left: 0
+  list-style none
+  .toc-item
+    &.active > .toc-link
+      position relative
+      color: rgba(0, 0, 0, .5)
+      font-weight: 600
+      &:before
+        content: ''
+        position absolute
+        top 0
+        left 0
+        width 100%
+        height 100%
+        background: rgba(0, 0, 0, .05)
+      &:after
+        content: ''
+        position absolute
+        top 0
+        left 0
+        width .25rem
+        height 100%
+        background-color: #999
+  .toc-child
+    padding-left: 10px
+    list-style none
+  .toc-link
+    display: block
+    padding: 0 1rem
+    line-height: 1.8rem
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    &:hover
+      color: #999
+      opacity: 1
