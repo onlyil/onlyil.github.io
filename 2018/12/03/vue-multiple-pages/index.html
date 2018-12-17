@@ -144,7 +144,14 @@
                     <h1 id="A-Vue-multiple-pages-Project-Template"><a href="#A-Vue-multiple-pages-Project-Template" class="headerlink" title="A Vue multiple-pages Project Template"></a>A Vue multiple-pages Project Template</h1><blockquote>
 <p>This project template is configured based on vue cli 2</p>
 </blockquote>
-<h2 id="Entry"><a href="#Entry" class="headerlink" title="Entry"></a>Entry</h2>
+<p>For modify config of webpack, we need generate some configs in a new js: <code>config/multiple.js</code>.<br>Directory:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">├── build</span><br><span class="line">├── config</span><br><span class="line">│   ├── dev.env.js</span><br><span class="line">│   ├── index.js</span><br><span class="line">│   ├── multiple.js         // generate multiple entries webpack dev, pro related config</span><br><span class="line">│   └── prod.env.js</span><br><span class="line">├── package.json</span><br><span class="line">├── src</span><br><span class="line">│   ├── assets</span><br><span class="line">│   ├── components</span><br><span class="line">│   └── pages               // divide pages by multiple modules</span><br><span class="line">│       ├── admin</span><br><span class="line">│       │   ├── App.vue</span><br><span class="line">│       │   ├── index.html  // the template html of this module</span><br><span class="line">│       │   ├── main.js</span><br><span class="line">│       │   ├── vuepage</span><br><span class="line">│       │   └── router</span><br><span class="line">│       └── user</span><br><span class="line">│           ├── App.vue</span><br><span class="line">│           ├── index.html</span><br><span class="line">│           ├── main.js</span><br><span class="line">│           ├── vuepage</span><br><span class="line">│           └── router</span><br><span class="line">└── static</span><br></pre></td></tr></table></figure>
+<h2 id="Entry"><a href="#Entry" class="headerlink" title="Entry"></a>Entry</h2><ul>
+<li>Firstly get the dir names in <code>src/pages</code>, use node <code>fs</code> module.</li>
+<li>Generate entries object by the <code>main.js</code> of every module dir.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>)</span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>)</span><br><span class="line"><span class="keyword">const</span> pagesPath = path.resolve(__dirname, <span class="string">'..'</span>, <span class="string">'src/pages'</span>)</span><br><span class="line"><span class="keyword">const</span> dirs = fs.readdirSync(pagesPath)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> createMultipleEntries = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> entries = &#123;&#125;</span><br><span class="line">  dirs.forEach(<span class="function"><span class="params">dir</span> =&gt;</span> &#123;</span><br><span class="line">    entries[dir] = <span class="string">`<span class="subst">$&#123;pagesPath&#125;</span>/<span class="subst">$&#123;dir&#125;</span>/main.js`</span></span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="keyword">return</span> entries</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
                     
                     <!-- Tags Bottom -->
                     
@@ -195,10 +202,6 @@
     
         <p>
             <a href="/2018/09/14/hit-the-pit/">Hit the Pit</a>
-        </p>
-    
-        <p>
-            <a href="/2018/09/13/hello-world/">Hello World</a>
         </p>
     
 </div>
